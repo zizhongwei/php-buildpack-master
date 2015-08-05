@@ -172,19 +172,8 @@ class CloudFoundryInstaller(object):
             argument but makes no use of it.
         """
 
-        self._log.debug("Installing binary from manifest [%s]", url)
-        self._dwn.download(url, self._ctx['TMPDIR'])
-
-        fileName = urlparse(url).path.split('/')[-1]
-        fileToInstall = os.path.join(self._ctx['TMPDIR'], fileName)
-
-        if extract:
-            return self._unzipUtil.extract(fileToInstall,
-                    installDir,
-                    strip)
-        else:
-            shutil.copy(fileToInstall, installDir)
-            return installDir
+        self.install_binary_direct(url, '', installDir,
+                None, strip, extract)
 
     def translate_dependency_url(self, url):
         process = subprocess.Popen([os.path.join(self._ctx['BP_DIR'], 'compile-extensions', 'bin', 'translate_dependency_url'), url], stdout=subprocess.PIPE)
