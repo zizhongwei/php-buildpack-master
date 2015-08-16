@@ -135,6 +135,7 @@ Here's a list of some special features of the buildpack.
   - supports an extension mechanism that allows the buildpack to provided additional functionality
   - allows for application developers to provide custom extensions
   - easy troubleshooting with the BP_DEBUG environment variable
+  - smart session storage, defaults to file w/sticky sessions but can also use redis or memcached for storage.
 
 ## Examples
 
