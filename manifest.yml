@@ -37,7 +37,7 @@ dependencies:
     uri: https://pivotal-buildpacks.s3.amazonaws.com/tmp/httpd-2.4.16-linux-x64.tgz
     cf_stacks:
       - cflinuxfs2
-    md5: d5835124c3dbe8f26e8f83b0b37d66c5
+    md5: a03698b77e152785d31d3d5c62cffad5
   - name: php
     version: 5.6.13
     uri: https://pivotal-buildpacks.s3.amazonaws.com/tmp/php-5.6.13-linux-x64-1443643639.tgz 
